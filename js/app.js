@@ -122,3 +122,52 @@ const categoryCards = async (data) => {
     isLoading(false);
 };
 categoryCards("8");
+
+const cardDetails = (data) => {
+    isLoading(true);
+    const url = `https://openapi.programming-hero.com/api/news/${data}`;
+    fetch(url)
+        .then((res) => res.json())
+        .then((info) => cardShow(info.data[0]));
+    const modal = document.getElementById("card-modal");
+    modal.innerHTML = ``;
+};
+
+const cardShow = (data) => {
+    const { author, details, title, total_view, image_url: image, _id: id } = data;
+    console.log(data);
+    const modal = document.getElementById("card-modal");
+    modal.innerHTML = `
+    <div class="modal-box relative w-11/12 max-w-5xl">
+       <label for="my-modal-6" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+       <div>
+          <figure class="col-span-12 md:col-span-4 p-3"><img class="min-h-full min-w-full rounded-lg" src=${image} alt="Movie" /></figure>
+          <div class="card-body col-span-12 md:col-span-8">
+             <h2 class="card-title font-bold">${title ?? "No Title Found"}</h2>
+             <p class="font-medium text-gray-600">${details}</p>
+             <div class="card-actions justify-between items-center gap-5 pt-5">
+            
+                <div class="flex gap-4 items-center">
+                   <div class="avatar">
+                      <div class="w-14 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                         <img src=${image} />
+                      </div>
+                   </div>
+                   <div class="font-bold">
+                      <p>${(author?.name ?? "No name found").toUpperCase()}</p>
+                      <p>${author.published_date ? author.published_date : "No date found"}</p>
+                   </div>
+                </div>
+                <div class="flex gap-4 items-center font-bold">
+                   <div class="text-2xl">
+                      <i class="fa-regular fa-eye"></i>
+                   </div>
+                   <div><p>${total_view ?? "No data found"}</p></div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+    `;
+    isLoading(false);
+};
