@@ -30,14 +30,6 @@ const categoryFetch = async () => {
     const info = await res.json();
     categoryShow(info.data.news_category);
 };
-
-
-const categoryFetch = async () => {
-    const url = `https://openapi.programming-hero.com/api/news/categories`;
-    const res = await fetch(url);
-    const info = await res.json();
-    categoryShow(info.data.news_category);
-};
 const categoryShow = (data) => {
     const aCategory = [{ category_id: "08", category_name: "Home" }, ...data];
     const categoryUl = document.getElementById("category-ul");
