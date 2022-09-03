@@ -48,6 +48,68 @@
     </header>
     <!-- HEADER AREA END -->
 
+    <!-- MAIN AREAR START -->
+    <main class="my-20">
+        <section class="flex flex-col gap-4">
+            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-md">
+                <div class="collapse-title text-xl font-medium">Describe the differences among var, let and const.</div>
+                <div class="collapse-content">
+                    <p>
+                        The scope of a var variable is functional scope. The scope of a let variable is block scope. The
+                        scope of a const variable is block scope. It can be updated and re-declared in their own scope.
+                        The var variables can be updated and
+                        re-declared within its scope; let variables can be updated but not re-declared; const variables
+                        can neither be updated nor re-declared. They are all hoisted to the top of their scope.
+                    </p>
+                </div>
+            </div>
+            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-md">
+                <div class="collapse-title text-xl font-medium">Describe the differences between arrow function and
+                    regular function.</div>
+                <div class="collapse-content">
+                    <p>
+                        While both regular and arrow functions work in a similar manner, yet there are certain
+                        interesting differences between them : <br />1. Unlike regular functions, arrow functions do not
+                        have their own 'this' keyword. <br />2.
+                        Arguments objects are not available in arrow functions, but are available in regular functions.
+                        <br />3. Regular functions are 'constructible' and 'callable'. The arrow functions are only
+                        'callable' but not constructible.
+                        <br />4. Regular functions can be called using the 'new' keyword. But we will get a run-time
+                        error on trying to construct a non-constructible arrow functions using the new keyword.
+                    </p>
+                </div>
+            </div>
+            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-md">
+                <div class="collapse-title text-xl font-medium">Describe the differences among map(), forEach(),
+                    filter(), find().</div>
+                <div class="collapse-content">
+                    <p>
+                        .forEach() is used to execute the same code on every element in an array but does not change the
+                        array and it returns undefined. <br />.map() executes the same code on every element in an array
+                        and returns a new array with the
+                        updated elements. <br />.filter() checks every element in an array to see if it meets a certain
+                        criteria and returns a new array with the elements that return truthy for the criteria.
+                        <br />.find() is like filter() but it checks
+                        the elements only untill it finds the first value under that particular criteria. After meeting
+                        that value it immediately stops the operation and returns the single value.
+                    </p>
+                </div>
+            </div>
+            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-md">
+                <div class="collapse-title text-xl font-medium">Why should you use 'Templete String' ?</div>
+                <div class="collapse-content">
+                    <p>
+                        Template string is a powerful feature of modern JavaScript released in ES6. It lets us insert
+                        variables and expressions into strings without needing to concatenate like in older versions of
+                        JavaScript. It allows us to create
+                        strings that are complex and contain dynamic elements.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- MAIN AREA END -->
+
 
     <!-- JS FILE -->
     <script src="js/app.js"></script>

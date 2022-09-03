@@ -57,6 +57,46 @@
     <!-- HEADER AREA END -->
 
 
+    <!-- MAIN AREAR START -->
+    <main class="mb-14">
+        <!-- sort section -->
+        <section class="flex flex-col gap-4">
+            <div class="h-14 flex items-center bg-indigo-100 rounded-md">
+                <h3 class="text-xl font-semibold m-4" id="item-found">4 items found</h3>
+            </div>
+            <div class="flex h-14 justify-center md:justify-between flex-wrap gap-2 items-center">
+                <div class="flex gap-3 items-center">
+                    <label for="sort" class="font-semibold text-lg">Sort By View:</label>
+                    <select id="sort" class="select max-w-xs" disabled>
+                        <option>Default</option>
+                    </select>
+                </div>
+                <div class="flex gap-3">
+                    <div>
+                        <button class="btn btn-primary rounded-md px-8 font-medium text-base">Today's Pick</button>
+                    </div>
+                    <div>
+                        <button
+                            class="btn btn-outline btn-secondary rounded-md px-8 font-medium text-base">Trending</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- card -->
+        <section class="mt-14" id="category-card"></section>
+
+        <!-- modal -->
+        <section>
+            <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+            <div class="modal modal-bottom sm:modal-middle" id="card-modal"></div>
+        </section>
+        <section class="flex justify-center">
+            <progress class="progress w-56 fixed top-1/2 hidden" id="loader"></progress>
+        </section>
+    </main>
+    <!-- MAIN AREA END -->
+
 
 
 
